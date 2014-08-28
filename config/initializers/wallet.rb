@@ -1,0 +1,7 @@
+if ENV['GUID']
+  GUID = ENV['GUID']
+end
+
+if ENV['MAIN_PASSWORD']
+  MAIN_PASSWORD = ENV['MAIN_PASSWORD']
+end
