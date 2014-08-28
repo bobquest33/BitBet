@@ -20,6 +20,7 @@ gem "simple_form"
 gem "title"
 gem "uglifier"
 gem "unicorn"
+gem "therubyracer"
 
 group :development do
   gem "spring"
@@ -28,7 +29,6 @@ end
 
 group :development, :test do
   gem "awesome_print"
-  gem "byebug"
   gem "dotenv-rails"
   gem "factory_girl_rails"
   gem "pry-rails"

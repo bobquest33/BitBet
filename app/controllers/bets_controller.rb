@@ -8,7 +8,7 @@ class BetsController < ApplicationController
     if @bet.save
       render text: "made your bet: #{@bet.id}"
     else
-      render @bet
+      render :new
     end
   end
 
