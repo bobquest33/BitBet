@@ -1,6 +1,9 @@
 <%= @bet.description %>
 
-<h>Send 0.2 bitcoins to:</h>
+<h>Send <%= @bet.amount %> satoshis to:</h>
 
-<div class="qr"></div>
-<p>1efwef34r2dewr</p>
+<%= image_tag("http://chart.apis.google.com/chart?cht=qr&chs=200x200&chl=#{@bet.you}&chld=H|0") %>
+
+<p class="address"><%= @bet.you %></p>
+
+<p>An email will be sent to <b><%= @bet.judge %></b> to be the judge once you and your friend have sent the bitcoins!</p>
