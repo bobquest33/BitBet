@@ -2,8 +2,8 @@
 
 <h>Send <%= @bet.amount %> satoshis to:</h>
 
-<%= image_tag("http://chart.apis.google.com/chart?cht=qr&chs=200x200&chl=#{@bet.you}&chld=H|0") %>
+<%= image_tag("http://chart.apis.google.com/chart?cht=qr&chs=200x200&chl=#{@bet.send("#{@person}_address")}&chld=H|0") %>
 
-<p class="address"><%= @bet.you %></p>
+<p class="address"><%= @bet.send(@person) %></p>
 
 <p>An email will be sent to <b><%= @bet.judge %></b> to be the judge once you and your friend have sent the bitcoins!</p>

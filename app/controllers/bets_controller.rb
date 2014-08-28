@@ -6,7 +6,7 @@ class BetsController < ApplicationController
   def create
     @bet = Bet.new(bet_params)
     if @bet.save
-      render text: "made your bet: #{@bet.id}"
+      redirect_to bet_qr_url(@bet, :you)
     else
       render :new
     end

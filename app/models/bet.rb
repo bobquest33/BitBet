@@ -19,7 +19,7 @@ class Bet < ActiveRecord::Base
   private
 
   def self.mark_you_paid!(address, value)
-    bet = where(your_address: address).first
+    bet = where(you_address: address).first
 
     if bet
       bet.update(amount: value, you_paid: true)
@@ -37,9 +37,7 @@ class Bet < ActiveRecord::Base
 
   def make_addresses
     if GUID && MAIN_PASSWORD
-      p GUID
-      p MAIN_PASSWORD
-      { your_address: you, friend_address: friend }.each do |addr_column, person|
+      { you_address: you, friend_address: friend }.each do |addr_column, person|
         response = Net::HTTP.post_form(
           URI("https://blockchain.info/merchant/#{GUID}/new_address"),
           "password" => MAIN_PASSWORD, "label" => person)
