@@ -1,7 +1,5 @@
 source "https://rubygems.org"
 
-ruby "2.1.2"
-
 gem "airbrake"
 gem "bourbon", "~> 3.2.1"
 gem "coffee-rails"
@@ -38,7 +36,6 @@ group :development, :test do
 end
 
 group :test do
-  gem "capybara-webkit", ">= 1.2.0"
   gem "database_cleaner"
   gem "formulaic"
   gem "launchy"
