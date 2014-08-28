@@ -2,7 +2,7 @@
 
 <h>Send <%= @bet.amount %> satoshis to:</h>
 
-<%= image_tag("http://chart.apis.google.com/chart?cht=qr&chs=200x200&chl=#{@bet.you}&chld=H|0") %>
+<%= link_to image_tag("http://chart.apis.google.com/chart?cht=qr&chs=200x200&chl=#{@bet.you}&chld=H|0"), "bitcoin:" + @bet.you %>
 
 <p class="address"><%= @bet.you %></p>
 

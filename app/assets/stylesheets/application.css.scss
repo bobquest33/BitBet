@@ -64,6 +64,7 @@ p {
 	line-height: 17px;
 	text-shadow: 0px 1px 0px #FFFFFF;
 	margin: 30px;
+	text-align: center;
 	&.address {
 		font-size: 16px;
 		color: #FFFFFF;
@@ -72,6 +73,7 @@ p {
 		display: block;
 		text-align: center;
 		margin-bottom: 20px;
+		word-break: break-all;
 	}
 }
 
@@ -86,7 +88,7 @@ p {
 
 
 form#new_bet {
-	width: 400px;
+	width: 300px;
 	margin: 0 auto;
 	margin-top: 100px;
 	text-align: center;
@@ -120,7 +122,7 @@ form#new_bet {
 		font-size: 20px;
 		color: #AF7C44;
 		text-shadow: 0px 1px 0px rgba(255,255,255,0.50);
-		margin-left: 10px;
+		margin-left: -6px;
 	}
 	p {
 		&.desc {
@@ -131,8 +133,9 @@ form#new_bet {
 			line-height: 102px;
 		}
 		label {
-			width: 50px;
 			display: inline-block;
+			width: 30px;
+			text-indent: -60px;
 		}
 	}
 }
