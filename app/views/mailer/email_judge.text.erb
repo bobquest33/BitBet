@@ -1,0 +1,10 @@
+Your friends have made a bet. These are the friends:
+
+<%= @bet.you %>
+<%= @bet.friend %>
+
+This is their bet:
+
+<%= @bet.description %>
+
+Decide the winner here: <%= edit_bet_url(@bet) %>
