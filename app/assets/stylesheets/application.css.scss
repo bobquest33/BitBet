@@ -32,15 +32,15 @@ header {
 	left: 0;
 	right: 0;
 	top: 0;
-	background-image: url("/assets/header.png");
-	background-image: -webkit-image-set(url("/assets/header.png") 1x,
-    url("/assets/header@2x.png") 2x);
+	background-image: image-url("header.png");
+	background-image: -webkit-image-set(image-url("header.png") 1x,
+    image-url("header@2x.png") 2x);
 	.logo {
 		width: 171px;
 		height: 62px;
 		display: block;
 		margin: 5px auto;
-		background-image: url("/assets/logo@2x.png");
+		background-image: image-url("logo@2x.png");
 		background-size: 171px 62px;
 		position: absolute;
 		left: 50%;
@@ -111,7 +111,7 @@ form#new_bet {
 	}
 	input[name=commit] { /* Button */
 		border-radius: 8px;
-		background-image: url("/assets/button-bg@2x.png");
+		background-image: image-url("button-bg@2x.png");
 		border: 1px solid #DCA553;
 		-moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.09), inset 0px 1px 3px 0px rgba(255,255,255,0.50);
 		box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.09), inset 0px 1px 3px 0px rgba(255,255,255,0.50);
