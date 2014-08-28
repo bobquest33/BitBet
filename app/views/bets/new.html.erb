@@ -1,8 +1,8 @@
 <%= form_for @bet do |form| %>
   <p><%= form.label :description %> <%= form.text_field :description %></p>
   <p><%= form.label :amount %> <%= form.text_field :amount %></p>
-  <p><%= form.label :you %> <%= form.text_field :you %></p>
-  <p><%= form.label :friend %> <%= form.text_field :friend %></p>
-  <p><%= form.label :judge %> <%= form.text_field :judge %></p>
+  <p><%= form.label :you, "Your BTC address" %> <%= form.text_field :you %></p>
+  <p><%= form.label :friend, "Friend's BTC address" %> <%= form.text_field :friend %></p>
+  <p><%= form.label :judge, "Judge's email address" %> <%= form.text_field :judge %></p>
   <p><%= form.submit "Place bet" %></p>
 <% end %>
