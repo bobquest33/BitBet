@@ -12,6 +12,6 @@ class TransactionsController < ApplicationController
 
     Bet.mark_paid!(input_address, value)
 
-    render nothing: true, status: 200
+    render text: "ok", status: 200
   end
 end

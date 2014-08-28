@@ -5,6 +5,7 @@ class Bet < ActiveRecord::Base
   validates :judge, presence: true, email: true
 
   after_create :make_addresses, :email_qrs
+  after_update :send_money
 
   def self.mark_paid!(address, value)
     mark_you_paid!(address, value) or mark_friend_paid!(address, value)
@@ -62,6 +63,12 @@ class Bet < ActiveRecord::Base
     if you_address && friend_address
       Mailer.send_qr(self, :you).deliver
       Mailer.send_qr(self, :friend).deliver
+    end
+  end
+
+  def send_money
+    if money_unsent?
+      raise "to implement: Bet#send_money"
     end
   end
 end

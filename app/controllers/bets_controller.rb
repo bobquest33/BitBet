@@ -12,6 +12,19 @@ class BetsController < ApplicationController
     end
   end
 
+  def edit
+    @bet = Bet.find(params[:id])
+  end
+
+  def update
+    @bet = Bet.find(params[:id])
+    if @bet.update(params[:bet])
+      redirect_to root_url
+    else
+      render :edit
+    end
+  end
+
   private
 
   def bet_params
