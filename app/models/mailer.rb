@@ -5,4 +5,10 @@ class Mailer < ActionMailer::Base
     @bet = bet
     mail(to: bet.judge, subject: "Settle a bet")
   end
+
+  def send_qr(bet, person)
+    @bet = bet
+    @person = person
+    mail(to: bet.send(person), subject: "Pay for your bet")
+  end
 end

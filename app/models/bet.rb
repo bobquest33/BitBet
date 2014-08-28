@@ -4,7 +4,7 @@ class Bet < ActiveRecord::Base
   validates :friend, presence: true, email: true
   validates :judge, presence: true, email: true
 
-  after_create :make_addresses
+  after_create :make_addresses, :email_qrs
 
   def self.mark_paid!(address, value)
     mark_you_paid!(address, value) or mark_friend_paid!(address, value)
@@ -55,6 +55,13 @@ class Bet < ActiveRecord::Base
           raise "Net::HTTP"
         end
       end
+    end
+  end
+
+  def email_qrs
+    if you_address && friend_address
+      Mailer.send_qr(self, :you).deliver
+      Mailer.send_qr(self, :friend).deliver
     end
   end
 end
